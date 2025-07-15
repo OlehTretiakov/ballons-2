@@ -1,0 +1,67 @@
+body
+    font-family: 'Roboto'
+    letter-spacing: .2rem
+    font-weight: 400
+    color: $color-grey
+    font-size: $font-size-paragraph
+    
+.title-first
+    text-align: center
+    text-transform: uppercase
+    font-size: 5rem
+    font-weight: 800
+    line-height: 6rem
+    letter-spacing: 1rem
+    color: $color-white
+    &-1
+        animation-name: leftToRight
+        margin-bottom: 1rem
+    &-2
+        animation-name: rightToLeft
+        margin-bottom: 6rem
+        text-transform: lowercase
+        font-weight: 200
+        line-height: 4.8rem
+        font-size: 4rem
+        letter-spacing: .4rem
+    span
+        display: block
+        animation-duration: 2.4s
+        animation-delay: .7s
+        animation-fill-mode: backwards
+        animation-timing-function: ease
+.title-secondary
+    position: relative
+    z-index: 10
+    font-size: $font-size-h2
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: $gradien-light
+    background-clip: text
+    color: transparent 
+    transition: all .7s
+    backface-visibility: hidden 
+    &:hover 
+        transform: skewY(4deg) skewX(12deg) scale(1.03)
+        // text-shadow: $box-shadow
+    &_white
+        color: $color-white
+.title-third
+    font-size: $font-size-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 800 
+
+.paragraph
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+    font-weight: 400
+
+
+
+
+.menu-lines
+    height: .2rem
+    width: 3.2rem
+    background: #000
