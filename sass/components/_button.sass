@@ -1,57 +1,38 @@
 .btn
-
-    &, &:link, &:visited
-        position: relative
-        font-size: $font-size-paragraph
-        @include style-link($color-grey)
-        padding: 1.5rem 4rem
-        background-color: $color-white
-        border-radius: 5rem
-        transition: all .3s
+    position: relative
     &_animated
-        animation-name: bottomToTop
-        animation-duration: 2.4s
-        animation-delay: .7s
-        animation-fill-mode: backwards
+        opacity: 0
+        animation-name: toUp
+        animation-duration: 2s
+        animation-delay: .5s
+        animation-fill-mode: forwards
+    &:link, &:visited
+        @include  style-link($color-grey)
+        background-color: #fff
+        border-radius: 5rem
+        padding: 1.5rem 4rem
+        font-size: 2rem
+        font-weight: 400
+        letter-spacing: 5px
+        transition: all .2s
     &:hover
-        transform: translateY(-.3rem)
-        box-shadow: $box-shadow
+        transform: translateY(-.4rem)
         &::after
             opacity: 0
-            transform: scale(1.2, 1.7)
+            transform: scale(1.4,1.8)
+
     &:active
-        transform: translateY(.2rem)
+        transform: translateY(-.2rem)
     &::after
-        position: absolute
-        top: 0
-        left: 0
-        z-index: -1
         content: ''
-        background-color: $color-white
+        display: inline-block
+        background-color: #fff
         width: 100%
         height: 100%
-        border-radius: 10rem
-        display: inline-block
-        transition: all .7s
-
-.btn-text
-    &:link, &:visited
-        display: inline-block
-        font-size: $font-size-paragraph
-        letter-spacing: .2rem
-        font-weight: 700
-        padding: 1rem .6rem
-        border-bottom: 2px solid $color-brown-light
-        transition: .5s
-        color: $color-brown-light
-    &:hover
-        background-color: $color-brown-light
-        border-radius: .4rem
-        color: $color-white
-    &:active
-        transform: translateY(.2rem)
-.btn_dark
-    width: 23rem
-    border: none
-    background-color: $color-brown-light
-    color: $color-white
+        border-radius: 5rem
+        position: absolute
+        z-index: -10
+        top: 0
+        left: 0
+        transition: all .8s
+        backface-visibility: hidden

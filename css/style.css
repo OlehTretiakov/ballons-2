@@ -1,116 +1,3 @@
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: Roboto;
-  font-weight: 400;
-  color: #777777;
-  letter-spacing: 0.2rem;
-  padding: 5rem;
-  background-color: white;
-}
-
-.container {
-  background-color: #f7f7f7;
-}
-
-.header {
-  position: relative;
-  height: 95vh;
-  background: linear-gradient(to right, rgba(186, 133, 84, 0.7), rgba(1, 1, 1, 0.7)), url("../img/header-background.jpg") center center/cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-}
-.header__logo {
-  position: absolute;
-  top: 5rem;
-  left: 5rem;
-}
-.header__box {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
-.title-first {
-  text-align: center;
-}
-.title-first span {
-  opacity: 0;
-  display: block;
-  color: white;
-  animation-duration: 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-}
-.title-first__main {
-  font-weight: 800;
-  font-size: 5rem;
-  line-height: 6rem;
-  text-transform: uppercase;
-  letter-spacing: 1rem;
-  animation-name: leftToRight;
-}
-.title-first__secondary {
-  font-weight: 100;
-  font-size: 4rem;
-  line-height: 4.8rem;
-  letter-spacing: 0.5rem;
-  animation-name: rightToLeft;
-}
-
-.btn {
-  display: inline-block;
-  position: relative;
-}
-.btn_animated {
-  opacity: 0;
-  animation-name: toUp;
-  animation-duration: 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-}
-.btn:link, .btn:visited {
-  text-transform: uppercase;
-  background-color: #fff;
-  border-radius: 5rem;
-  padding: 1.5rem 4rem;
-  font-size: 2rem;
-  color: #777;
-  font-weight: 500;
-  transition: all 0.2s;
-}
-.btn:hover {
-  transform: translateY(-0.4rem);
-}
-.btn:hover::after {
-  opacity: 0;
-  transform: scale(1.4, 1.8);
-}
-.btn:active {
-  transform: translateY(-0.2rem);
-}
-.btn::after {
-  content: "";
-  display: inline-block;
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  border-radius: 5rem;
-  position: absolute;
-  z-index: -10;
-  top: 0;
-  left: 0;
-  transition: all 0.8s;
-  backface-visibility: hidden;
-}
-
 @keyframes leftToRight {
   0% {
     transform: translateX(-20rem);
@@ -152,4 +39,180 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+body {
+  font-family: Roboto;
+  font-weight: 400;
+  color: #777777;
+  letter-spacing: 0.2rem;
+  padding: 5rem;
+  background-color: #fff;
+}
+
+.title-first {
+  text-align: center;
+}
+.title-first span {
+  opacity: 0;
+  display: block;
+  color: white;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.title-first__main {
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  animation-name: leftToRight;
+}
+.title-first__secondary {
+  font-weight: 100;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.5rem;
+  animation-name: rightToLeft;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.margin-bottom-80px {
+  margin-bottom: 8rem;
+}
+
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-10px {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-50px {
+  margin-bottom: 5rem;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  background-color: #f7f7f7;
+}
+
+.btn {
+  position: relative;
+}
+.btn_animated {
+  opacity: 0;
+  animation-name: toUp;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #777777;
+  background-color: #fff;
+  border-radius: 5rem;
+  padding: 1.5rem 4rem;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+  transition: all 0.2s;
+}
+.btn:hover {
+  transform: translateY(-0.4rem);
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scale(1.4, 1.8);
+}
+.btn:active {
+  transform: translateY(-0.2rem);
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  transition: all 0.8s;
+  backface-visibility: hidden;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(to right, rgba(186, 133, 84, 0.7), rgba(1, 1, 1, 0.7)), url("../img/header-background.jpg") center center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.header__logo {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+}
+.header__box {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+[class^=col-] {
+  float: left;
+}
+[class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.col-2-of-3 {
+  width: calc((100% - 6rem) / 3 * 2 + 6rem / 3);
+}
+
+.col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.col-2-of-4 {
+  width: calc((100% - 2 * 6rem) / 2 + 6rem / 2);
+}
+
+.col-3-of-4 {
+  width: calc((100% - 6rem) / 4 * 3 + 6rem / 2);
 }/*# sourceMappingURL=style.css.map */
